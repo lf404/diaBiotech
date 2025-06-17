@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Neurona</title>
+    <!-- Enlazamos nuestra hoja de estilos -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Cargamos la librería p5.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+    <h1>Simulación de Disparo Neuronal</h1>
+    
+    <div id="simulation-wrapper">
+        <!-- El lienzo de p5.js se insertará aquí -->
+        <div id="canvas-container"></div>
+        
+        <!-- Controles interactivos -->
+        <div id="controls">
+            <h2>Panel de Control</h2>
+            <div class="control-item">
+                <label for="threshold-slider">Umbral de Disparo: <span id="threshold-value">70</span></label>
+                <input type="range" id="threshold-slider" min="30" max="150" value="70">
+            </div>
+            <div class="control-item">
+                <button id="stimulate-button">Enviar Estímulo (+15)</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Finalmente, cargamos nuestro código de la simulación -->
+    <script src="sketch.js"></script>
+</body>
+</html>
